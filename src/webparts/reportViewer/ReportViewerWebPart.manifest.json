@@ -1,0 +1,28 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
+  "id": "b315642e-796d-4a73-9078-f0946975c4f2",
+  "alias": "ReportViewerWebPart",
+  "componentType": "WebPart",
+
+  // The "*" signifies that the version should be taken from the package.json
+  "version": "*",
+  "manifestVersion": 2,
+
+  // If true, the component can only be installed on sites where Custom Script is allowed.
+  // Components that allow authors to embed arbitrary script code should set this to true.
+  // https://support.office.com/en-us/article/Turn-scripting-capabilities-on-or-off-1f2c515f-5d7e-448a-9fd7-835da935584f
+  "requiresCustomScript": false,
+  "supportedHosts": ["SharePointWebPart", "TeamsPersonalApp", "TeamsTab", "SharePointFullPage"],
+  "supportsThemeVariants": true,
+
+  "preconfiguredEntries": [{
+    "groupId": "5c03119e-3074-46fd-976b-c60198311f70", // Advanced
+    "group": { "default": "Advanced" },
+    "title": { "default": "KEA-ReportViewer" },
+    "description": { "default": "ReportViewer description" },
+    "iconImageUrl": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBMaWNlbnNlOiBDQyBBdHRyaWJ1dGlvbi4gTWFkZSBieSBTaGFubm9uIEUuIFRob21hczogaHR0cHM6Ly9kcmliYmJsZS5jb20vc2hhbm5vbmV0aG9tYXMgLS0+CjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iVXBsb2FkZWQgdG8gc3ZncmVwby5jb20iIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIAoJIHdpZHRoPSI4MDBweCIgaGVpZ2h0PSI4MDBweCIgdmlld0JveD0iMCAwIDMyIDMyIiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4KCS5mZWF0aGVyX2VlbntmaWxsOiMwQjE3MTk7fQo8L3N0eWxlPgo8cGF0aCBjbGFzcz0iZmVhdGhlcl9lZW4iIGQ9Ik04LDEwLjVMOCwxMC41QzgsMTAuMjI0LDguMjI0LDEwLDguNSwxMGgzYzAuMjc2LDAsMC41LDAuMjI0LDAuNSwwLjV2MGMwLDAuMjc2LTAuMjI0LDAuNS0wLjUsMC41aC0zCglDOC4yMjQsMTEsOCwxMC43NzYsOCwxMC41eiBNOC41LDEzaDNjMC4yNzYsMCwwLjUtMC4yMjQsMC41LTAuNXYwYzAtMC4yNzYtMC4yMjQtMC41LTAuNS0wLjVoLTNDOC4yMjQsMTIsOCwxMi4yMjQsOCwxMi41djAKCUM4LDEyLjc3Niw4LjIyNCwxMyw4LjUsMTN6IE0zMCw4djE4YzAsMS42NTctMS4zNDMsMy0zLDNINWMtMS42NTcsMC0zLTEuMzQzLTMtM1Y4YzAtMS42NTcsMS4zNDMtMywzLTNjMCwwLDAuNDQ4LTEsMS0xaDMuMDkyCglDOS4yOTksMy40MTksOS44NDksMywxMC41LDNzMS4yMDEsMC40MTksMS40MDgsMUgxNGMwLjU1MiwwLDEsMC40NDgsMSwxaDEyQzI4LjY1Nyw1LDMwLDYuMzQzLDMwLDh6IE02LDE1aDhWNWgtMnYyLjUKCWMwLDAuODkyLTAuNzgzLDEuNjA1LTEuNjk3LDEuNDg3QzkuNTQ3LDguODksOSw4LjIxLDksNy40NDhWNy4yNWMwLTAuMjc2LDAuMjI0LTAuNSwwLjUtMC41aDBjMC4yNzYsMCwwLjUsMC4yMjQsMC41LDAuNVY3LjUKCWMwLDAuMzAzLDAuMjcxLDAuNTQ0LDAuNTg0LDAuNDkzQzEwLjgzLDcuOTUzLDExLDcuNzIxLDExLDcuNDcyTDExLDVINlYxNXogTTI4Ljk3NiwyNi4yNDJDMjguNDQ3LDI2LjcwOCwyNy43NiwyNywyNywyN0g1CgljLTAuNzYsMC0xLjQ0Ny0wLjI5Mi0xLjk3Ni0wLjc1OEMzLjE0NSwyNy4yMzEsMy45NzgsMjgsNSwyOGgyMkMyOC4wMjIsMjgsMjguODU1LDI3LjIzMSwyOC45NzYsMjYuMjQyeiBNMjksOGMwLTEuMTA1LTAuODk1LTItMi0yCglIMTV2OWMwLDAuNTUyLTAuNDQ4LDEtMSwxSDZjLTAuNTUyLDAtMS0wLjQ0OC0xLTFsMC05QzMuODk1LDYsMyw2Ljg5NSwzLDh2MTZjMCwxLjEwNSwwLjg5NSwyLDIsMmgyMmMxLjEwNSwwLDItMC44OTUsMi0yVjh6CgkgTTI2LjY5MSwxNC4wMzhDMjYuNjMsMTQuMDEzLDI2LjU2NSwxNCwyNi41LDE0aC00Yy0wLjI3NiwwLTAuNSwwLjIyNC0wLjUsMC41czAuMjI0LDAuNSwwLjUsMC41aDIuNzkzbC0zLDNoLTEuNTg2bC0xLjg1NC0xLjg1NAoJYy0wLjE5NS0wLjE5NS0wLjUxMi0wLjE5NS0wLjcwNywwTDE1LjI5MywxOUgxMS41Yy0wLjEzMywwLTAuMjYsMC4wNTMtMC4zNTQsMC4xNDZMOC4yOTMsMjJINS41QzUuMjI0LDIyLDUsMjIuMjI0LDUsMjIuNQoJUzUuMjI0LDIzLDUuNSwyM2gzYzAuMTMzLDAsMC4yNi0wLjA1MywwLjM1NC0wLjE0NkwxMS43MDcsMjBIMTUuNWMwLjEzMywwLDAuMjYtMC4wNTMsMC4zNTQtMC4xNDZsMi42NDYtMi42NDZsMS42NDYsMS42NDYKCUMyMC4yNCwxOC45NDcsMjAuMzY3LDE5LDIwLjUsMTloMmMwLjEzMywwLDAuMjYtMC4wNTMsMC4zNTQtMC4xNDZMMjYsMTUuNzA3VjE4LjVjMCwwLjI3NiwwLjIyNCwwLjUsMC41LDAuNXMwLjUtMC4yMjQsMC41LTAuNXYtNAoJYzAtMC4wNjUtMC4wMTMtMC4xMy0wLjAzOC0wLjE5MUMyNi45MTEsMTQuMTg3LDI2LjgxMywxNC4wODksMjYuNjkxLDE0LjAzOHoiLz4KPC9zdmc+",
+    "properties": {
+      "description": "ReportViewer"
+    }
+  }]
+}

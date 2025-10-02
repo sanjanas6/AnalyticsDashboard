@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "kEA-ReportViewer",
+    "id": "d65f6302-990e-45de-b3ba-7131dbe448e6",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.21.1"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "kEReportViewer description"
+      },
+      "longDescription": {
+        "default": "kEReportViewer description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "ke-report-viewer Feature",
+        "description": "The feature that activates elements of the ke-report-viewer solution.",
+        "id": "611dfc8c-aa23-4a60-a7bf-4a834bca185f",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/kea-reportviewer.sppkg"
+  }
+}

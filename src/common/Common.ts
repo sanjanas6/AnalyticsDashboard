@@ -1,0 +1,1 @@
+export const LIST_SERVER_RELATIVE_URL = "/Lists/AnalyticsList"; 

@@ -1,0 +1,37 @@
+[
+  {
+    "Id": 1,
+    "Title": "Test Tile for Dashboard #1",
+    "Thumbnail": "https://operaparallele.org/wp-content/uploads/2023/09/Placeholder_Image.png",
+    "Description": "",
+    "Metadata": "Data Source"
+  },
+  {
+    "Id": 2,
+    "Title": "Test Tile for Dashboard #2",
+    "Thumbnail": "https://operaparallele.org/wp-content/uploads/2023/09/Placeholder_Image.png",
+    "Description": "",
+    "Metadata": "Marketing metrics"
+  },
+  {
+    "Id": 3,
+    "Title": "Test Tile for Dashboard #3",
+    "Thumbnail": "https://operaparallele.org/wp-content/uploads/2023/09/Placeholder_Image.png",
+    "Description": "",
+    "Metadata": "Operations"
+  },
+  {
+    "Id": 4,
+    "Title": "Test Tile for Dashboard #4",
+    "Thumbnail": "https://operaparallele.org/wp-content/uploads/2023/09/Placeholder_Image.png",
+    "Description": "",
+    "Metadata": "Finance"
+  },
+  {
+    "Id": 5,
+    "Title": "Test Tile for Dashboard #5",
+    "Thumbnail": "https://operaparallele.org/wp-content/uploads/2023/09/Placeholder_Image.png",
+    "Description": "",
+    "Metadata": "Finance"
+  }
+]

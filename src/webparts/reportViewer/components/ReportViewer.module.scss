@@ -1,0 +1,96 @@
+.layout {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1rem;
+  height: 100%;
+}
+
+/* ---- Top Header ---- */
+.topHeader {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f3f2f1;
+  padding: 15px 20px;
+  border-bottom: 1px solid #edebe9;
+  z-index: 10;
+}
+
+.topTitle {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #222;
+}
+
+.viewToggle {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* ---- Main Area ---- */
+.mainArea {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1rem;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* ---- Content Area ---- */
+.contentArea {
+  grid-column: span 4;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.contentArea.shrink {
+  grid-column: span 2;
+}
+
+/* ---- Card Grid ---- */
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.cardGrid.shrink {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.card {
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 1000px) {
+  .mainArea {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar,
+  .contentArea,
+  .detailPanel {
+    grid-column: span 1;
+  }
+
+  .cardGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+}
+
+@media (max-width: 560px) {
+  .cardGrid {
+    grid-template-columns: 1fr;
+  }
+}

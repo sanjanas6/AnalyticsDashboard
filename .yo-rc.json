@@ -1,0 +1,18 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "22.18.0",
+    "sdksVersions": {},
+    "version": "1.21.1",
+    "libraryName": "ke-report-viewer",
+    "libraryId": "d65f6302-990e-45de-b3ba-7131dbe448e6",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "kEReportViewer",
+    "solutionShortDescription": "kEReportViewer description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "webpart"
+  }
+}
