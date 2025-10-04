@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
 import React from "react";
-import { IconButton } from "@fluentui/react";
 import styles from "./DetailPanel.module.scss";
 import { ICard } from "../../webparts/reportViewer/components/ReportViewer";
 
@@ -14,13 +13,9 @@ const DetailPanel: React.FC<DetailPanelProps> = ({ selectedCard, onClose }) => {
     <aside className={styles.detailPanel}>
       <div className={styles.detailHeader}>
         <div className={styles.detailTitle}>{selectedCard.Title}</div>
-        <IconButton
-          iconProps={{ iconName: "ChromeClose" }}
-          title="Close"
-          ariaLabel="Close panel"
-          onClick={onClose}
-          className={styles.closeButton}
-        />
+        <button className={styles.closeButton} onClick={onClose}>
+          Close
+        </button>
       </div>
 
       <div className={styles.detailContent}>

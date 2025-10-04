@@ -8,12 +8,14 @@ interface CardItemProps {
   isSelected: boolean;
   onInfoClick: (e: React.MouseEvent, item: ICard) => void;
   onCardClick: () => void;
+  isPanelOpen?: boolean;
 }
 
 export const CardItem: React.FC<CardItemProps> = ({
   item,
   onInfoClick,
   onCardClick,
+  isPanelOpen
 }) => {
   return (
     <div className={styles.cardItem} onClick={onCardClick}>
@@ -21,7 +23,7 @@ export const CardItem: React.FC<CardItemProps> = ({
       <div className={styles.cardHeader}>
         <span className={styles.cardTitle}>{item.Title}</span>
         <Icon
-          iconName="Info"
+          iconName={isPanelOpen ? "ChromeClose" : "Info"}
           className={styles.infoIcon}
           onClick={(e) => onInfoClick(e, item)}
         />

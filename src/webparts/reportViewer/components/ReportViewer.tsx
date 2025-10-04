@@ -69,14 +69,20 @@ const ReportViewer: React.FC = () => {
             iconProps={{ iconName: "BulletedList" }}
             title="List view"
             ariaLabel="List view"
-            onClick={() => setViewType("list")}
+            onClick={() => {
+              setViewType("list");
+              // Close detail panel when switching to list view
+              setIsPanelOpen(false);
+              setSelectedCard(null);
+            }}
           />
         </div>
       </header>
 
       <div className={styles.mainArea}>
         {/* ---- Sidebar ---- */}
-         <Sidebar
+        <Sidebar
+          viewType={viewType}
           searchTerm={searchTerm}
           setSearchTerm={setSearchTerm}
           publisherFilter={publisherFilter}
@@ -94,6 +100,7 @@ const ReportViewer: React.FC = () => {
                   key={c.Id}
                   item={c}
                   isSelected={selectedCard?.Id === c.Id}
+                  isPanelOpen={selectedCard?.Id === c.Id && isPanelOpen}
                   onInfoClick={(e: React.MouseEvent<Element, MouseEvent>) => handleInfoClick(e, c)}
                   onCardClick={() => handleCardClick(c)}
                 />
@@ -102,12 +109,11 @@ const ReportViewer: React.FC = () => {
           ) : (
             <ListView cards={filteredCards} onCardClick={handleCardClick} />
           )}
+          {/* ---- Detail Panel (grid column) ---- */}
+          {isPanelOpen && selectedCard && (
+            <DetailPanel selectedCard={selectedCard} onClose={closePanel} />
+          )}
         </main>
-
-        {/* ---- Detail Panel (grid column) ---- */}
-        {isPanelOpen && selectedCard && (
-          <DetailPanel selectedCard={selectedCard} onClose={closePanel} />
-        )}
       </div>
     </div>
   );

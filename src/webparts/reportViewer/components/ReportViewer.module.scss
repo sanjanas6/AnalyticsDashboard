@@ -1,22 +1,20 @@
 .layout {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 1rem;
+  display: flex;
+  flex-direction: column;
   height: 100%;
 }
 
+
 /* ---- Top Header ---- */
 .topHeader {
-  grid-column: 1 / -1;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #f3f2f1;
-  padding: 15px 20px;
-  border-bottom: 1px solid #edebe9;
-  z-index: 10;
+  padding: 1rem;
+  background: #f9f9f9;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 10px;
 }
-
 .topTitle {
   font-size: 1.3rem;
   font-weight: 600;
@@ -30,30 +28,30 @@
 
 /* ---- Main Area ---- */
 .mainArea {
-  grid-column: 1 / -1;
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: 1.5fr 4.5fr; /* Sidebar 1.5, Content 4.5 */
   gap: 1rem;
-  flex: 1;
-  overflow: hidden;
+  height: calc(100% - 60px); /* adjust for header */
 }
 
 /* ---- Content Area ---- */
+
 .contentArea {
-  grid-column: span 5;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr; /* by default full width for cards */
+  gap: 1rem;
+  transition: all 0.3s ease;
 }
 
+
 .contentArea.shrink {
-  grid-column: span 3;
+  grid-template-columns: 2fr 1fr; /* 2/3 cards, 1/3 detail */
 }
 
 /* ---- Card Grid ---- */
 .cardGrid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr); /* 4 cards in a row */
   gap: 1rem;
 }
 
